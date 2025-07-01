@@ -11,14 +11,14 @@ def salvar_sessao():
         print("⚠️ Faça login manualmente e pressione ENTER para continuar.")
         input()
 
-        context.storage_state(path="estado_autenticado_LPCNET_LPCNET.json")
+        context.storage_state(path="estado_autenticado_LPCNET.json")
         print("✅ Sessão salva em 'estado_autenticado_LPCNET.json'.")
         browser.close()
 
 def verificar_autenticacao():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
-        context = browser.new_context(storage_state="estado_autenticado_LPCNET_LPCNET.json")
+        context = browser.new_context(storage_state="estado_autenticado_LPCNET.json")
         page = context.new_page()
 
         page.goto("https://lpcnet.slapl.prod.aws.scania.com")

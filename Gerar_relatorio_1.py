@@ -192,7 +192,7 @@ def enviar_email(anexos):
 def executar_rotina():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
-        context = browser.new_context(storage_state="estado_autenticado_LPCNET_LPCNET.json")
+        context = browser.new_context(storage_state="estado_autenticado_LPCNET.json")
 
         arquivos_gerados = []
 
@@ -209,7 +209,7 @@ def executar_rotina():
                 print("⚠️ Nenhum relatório foi gerado para enviar.")
 
 
-def agendar_rotina(hora_agendada="08:20"):
+def agendar_rotina(hora_agendada="08:30"):
     print(f"⏰ Aguardando para rodar todos os dias às {hora_agendada}...")
 
     while True:
@@ -234,7 +234,7 @@ def agendar_rotina(hora_agendada="08:20"):
 # ==================== EXECUÇÃO ==========================
 
 if __name__ == "__main__":
-    agendar_rotina("08:20")  # Pode alterar o horário aqui
+    agendar_rotina("08:30")  # Pode alterar o horário aqui
 
 
     
