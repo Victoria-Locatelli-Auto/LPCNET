@@ -221,7 +221,7 @@ def executar_rotina():
         else:
             print("⚠️ Nenhum relatório foi gerado para enviar.")
 
-def agendar_rotina(hora_agendada="08:40"):
+def agendar_rotina(hora_agendada="08:30"):
     print(f"⏰ Aguardando para rodar todos os dias às {hora_agendada}...")
 
     while True:
@@ -244,4 +244,4 @@ def agendar_rotina(hora_agendada="08:40"):
 # ==================== EXECUÇÃO ==========================
 
 if __name__ == "__main__":
-    agendar_rotina("08:40")
+    agendar_rotina("08:30")
