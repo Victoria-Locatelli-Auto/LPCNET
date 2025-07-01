@@ -12,7 +12,7 @@ from email.mime.text import MIMEText
 
 EMAIL_REMETENTE = "victoria.santos@mcmtocantins.com"
 SENHA_EMAIL = "zxcc lqby cvsa pchf"
-EMAIL_DESTINATARIO = ["joao.antunes@mcmtocantins.com", "natalia.sobral@mcmtocantins.com","daniel@teddi.com.br"]
+EMAIL_DESTINATARIO = ["victorialocatelli71@gmail.com"]
 SMTP_SERVIDOR = "smtp.gmail.com"
 SMTP_PORTA = 587
 
@@ -221,27 +221,3 @@ def executar_rotina():
         else:
             print("⚠️ Nenhum relatório foi gerado para enviar.")
 
-def agendar_rotina(hora_agendada="08:30"):
-    print(f"⏰ Aguardando para rodar todos os dias às {hora_agendada}...")
-
-    while True:
-        agora = datetime.now()
-        hora_execucao = datetime.strptime(hora_agendada, "%H:%M").replace(
-            year=agora.year, month=agora.month, day=agora.day
-        )
-
-        if agora >= hora_execucao:
-            hora_execucao += timedelta(days=1)
-
-        tempo_espera = (hora_execucao - agora).total_seconds()
-
-        print(f"🕒 Próxima execução em {hora_execucao.strftime('%d/%m/%Y %H:%M')}")
-        time.sleep(tempo_espera)
-
-        print("🚀 Iniciando execução da rotina!")
-        executar_rotina()
-
-# ==================== EXECUÇÃO ==========================
-
-if __name__ == "__main__":
-    agendar_rotina("08:30")
