@@ -12,7 +12,7 @@ from email.mime.text import MIMEText
 
 EMAIL_REMETENTE = "victoria.santos@mcmtocantins.com"
 SENHA_EMAIL = "zxcc lqby cvsa pchf"
-EMAIL_DESTINATARIO = ["victorialocatelli71@gmail.com"]
+EMAIL_DESTINATARIO = ["joao.antunes@mcmtocantins.com", "natalia.sobral@mcmtocantins.com","daniel@teddi.com.br"]
 SMTP_SERVIDOR = "smtp.gmail.com"
 SMTP_PORTA = 587
 

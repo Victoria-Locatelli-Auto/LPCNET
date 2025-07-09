@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright, TimeoutError
+from playwright.sync_api import sync_playwright
 from datetime import datetime, timedelta
 import openpyxl
 import time
@@ -189,7 +189,7 @@ def enviar_email(anexos):
     except Exception as e:
         print(f"❌ Erro ao enviar email: {e}")
 
-def executar_rotina():
+def executar_rotina_1():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         context = browser.new_context(storage_state="estado_autenticado_LPCNET.json")
@@ -208,4 +208,4 @@ def executar_rotina():
         else:
                 print("⚠️ Nenhum relatório foi gerado para enviar.")
 
-    
+

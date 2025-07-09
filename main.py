@@ -17,7 +17,7 @@ def executar_automacao():
     print("✅ Automação de ontem concluída .\n")
 
 # Agendamento para rodar todos os dias às 08:30 (ajuste o horário conforme precisar)
-schedule.every().day.at("16:32").do(executar_automacao)
+schedule.every().day.at("08:30").do(executar_automacao)
 
 print("⏰ Agendamento configurado para rodar todos os dias às 08:30.")
 print("🌀 Mantendo o programa em execução...")
